@@ -17,6 +17,9 @@ public class Console {
     // #Takes the word into the system and passes it out
 
      System.out.println("Guess a letter");
+     sc = new Scanner(System.in);
+     String letter = sc.nextLine();
+
   }
 
 
