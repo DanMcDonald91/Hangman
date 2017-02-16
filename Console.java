@@ -13,6 +13,11 @@ public class Console {
     System.out.flush();
     Word hiddenWord = new Word(data);
      System.out.println(hiddenWord.hide());
+
     // #Takes the word into the system and passes it out
+
+     System.out.println("Guess a letter");
   }
+
+
 }
