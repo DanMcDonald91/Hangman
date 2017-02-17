@@ -4,7 +4,7 @@ public class Console {
   Scanner sc;
   String data;
   String letter;
-  String answer;
+  int answer;
   Game game = new Game();
 
 

@@ -1,12 +1,12 @@
 public class Word {
  private String word;
  private StringBuilder hiddenWord;
- private String answer;
+ private int answer;
 
  public Word(String word) {
 
   this.word = word;
-  this.answer = "Yer ma";
+  this.answer = 0;
 }
 
 public String hide() {
@@ -23,19 +23,27 @@ public String hide() {
 
  // append is adding asterixs 
 
+public int getIndex(String s) {
+  char letter = s.charAt(0);
+  return word.indexOf(letter);
 
-public String checkGuess(String s) {
+  }
+
+public int checkGuess(String s) {
   // char letter = s.charAt(0);
   // for (char c : word.toCharArray()){
     // if (letter == c) {
   if (word.contains(s)){
-    answer = "yes";
+    answer = getIndex(s);
+    // answer = true;
   }
   else {
-    answer = "no";
+    // answer = false;
+    answer = 1000000;
   }
-  return answer;
+   return answer;
 }
+
 
 }
 
