@@ -3,6 +3,9 @@ public class Console {
 
   Scanner sc;
   String data;
+  String letter;
+  String answer;
+  Game game = new Game();
 
 
   public void start() {
@@ -13,12 +16,14 @@ public class Console {
     System.out.flush();
     Word hiddenWord = new Word(data);
      System.out.println(hiddenWord.hide());
+    letter = game.newGuess();
+
+    answer = hiddenWord.checkGuess(letter);
+    System.out.println(answer);
 
     // #Takes the word into the system and passes it out
 
-     System.out.println("Guess a letter");
-     sc = new Scanner(System.in);
-     String letter = sc.nextLine();
+     
 
   }
 
